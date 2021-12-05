@@ -1,0 +1,11 @@
+/Users/jocke/development/jensen-project/jensen-project-department/src/main/java/se/jensen/project/department/dao/DepartmentDao.java
+/Users/jocke/development/jensen-project/jensen-project-department/src/main/java/se/jensen/project/department/api/mapper/DepartmentModelsMapper.java
+/Users/jocke/development/jensen-project/jensen-project-department/src/main/java/se/jensen/project/department/entity/DepartmentId.java
+/Users/jocke/development/jensen-project/jensen-project-department/src/main/java/se/jensen/project/department/dao/DepartmentDatabaseEntryMapper.java
+/Users/jocke/development/jensen-project/jensen-project-department/src/main/java/se/jensen/project/department/entity/Department.java
+/Users/jocke/development/jensen-project/jensen-project-department/src/main/java/se/jensen/project/department/dao/DepartmentDatabaseEntry.java
+/Users/jocke/development/jensen-project/jensen-project-department/src/main/java/se/jensen/project/department/api/DepartmentModel.java
+/Users/jocke/development/jensen-project/jensen-project-department/src/main/java/se/jensen/project/department/rest/DepartmentRestService.java
+/Users/jocke/development/jensen-project/jensen-project-department/src/main/java/se/jensen/project/department/api/mapper/DepartmentModelMapper.java
+/Users/jocke/development/jensen-project/jensen-project-department/src/main/java/se/jensen/project/department/service/DepartmentServiceImpl.java
+/Users/jocke/development/jensen-project/jensen-project-department/src/main/java/se/jensen/project/department/service/DepartmentService.java

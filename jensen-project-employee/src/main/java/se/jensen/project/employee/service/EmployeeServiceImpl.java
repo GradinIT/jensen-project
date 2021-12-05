@@ -1,0 +1,60 @@
+package se.jensen.project.employee.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import se.jensen.project.common.aspects.TimeAndLogg;
+import se.jensen.project.common.dao.EntityAlreadyInStorageException;
+import se.jensen.project.common.dao.EntityNotFoundException;
+import se.jensen.project.employee.dao.EmployeeDao;
+import se.jensen.project.employee.dao.EmployeeDatabaseEntry;
+import se.jensen.project.employee.dao.EmployeeDatabaseEntryMapper;
+import se.jensen.project.employee.entity.Employee;
+
+import java.util.List;
+import java.util.Optional;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+    @Autowired
+    private EmployeeDao employeeDao;
+
+    @TimeAndLogg
+    public Employee getEmployeeById(Integer employeeId) {
+        Optional<EmployeeDatabaseEntry> employee = employeeDao.findById(employeeId);
+        if(employee.isPresent())
+            return EmployeeDatabaseEntryMapper.map(employee.get());
+        else throw new EntityNotFoundException(employeeId);
+    }
+
+    @TimeAndLogg
+    public Employee createEmployee(Employee employee) {
+        Optional<EmployeeDatabaseEntry> e = employeeDao.findById(employee.getEmployeeId().getId());
+        if(e.isPresent()) {
+            throw new EntityAlreadyInStorageException(employee.getEmployeeId().getId());
+        }
+        return EmployeeDatabaseEntryMapper.map(employeeDao.save(EmployeeDatabaseEntryMapper.map(employee)));
+    }
+
+
+    @TimeAndLogg
+    public Employee removeEmployee(Employee employee) {
+        Optional<EmployeeDatabaseEntry> e = employeeDao.findById(employee.getEmployeeId().getId());
+        if(!e.isPresent()) {
+            throw new EntityNotFoundException(employee.getEmployeeId().getId());
+        }
+        employeeDao.delete(EmployeeDatabaseEntryMapper.map(employee));
+        return employee;
+    }
+    @TimeAndLogg
+    public Employee updateEmployee(Employee employee) {
+        Optional<EmployeeDatabaseEntry> e = employeeDao.findById(employee.getEmployeeId().getId());
+        if(!e.isPresent()) {
+            throw new EntityNotFoundException(employee.getEmployeeId().getId());
+        }
+        return EmployeeDatabaseEntryMapper.map(employeeDao.save(EmployeeDatabaseEntryMapper.map(employee)));
+    }
+    @TimeAndLogg
+    public List<Employee> getAllEmployees() {
+        return EmployeeDatabaseEntryMapper.map(employeeDao.findAll());
+    }
+}
