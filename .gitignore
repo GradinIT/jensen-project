@@ -2,6 +2,7 @@
 *.iml
 **/build/*
 **/target/*
+*.jar
 **/.gradle/*
 **/out/*
 **/logs/*

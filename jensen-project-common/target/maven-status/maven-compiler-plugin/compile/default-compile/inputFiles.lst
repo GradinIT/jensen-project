@@ -1,9 +1,0 @@
-/Users/jocke/development/jensen-project/jensen-project-common/src/main/java/se/jensen/project/common/entity/Entity.java
-/Users/jocke/development/jensen-project/jensen-project-common/src/main/java/se/jensen/project/common/util/GenericToStringBuilder.java
-/Users/jocke/development/jensen-project/jensen-project-common/src/main/java/se/jensen/project/common/entity/EntityID.java
-/Users/jocke/development/jensen-project/jensen-project-common/src/main/java/se/jensen/project/common/rest/ExceptionHandlerAdvice.java
-/Users/jocke/development/jensen-project/jensen-project-common/src/main/java/se/jensen/project/common/aspects/TimeAndLogg.java
-/Users/jocke/development/jensen-project/jensen-project-common/src/main/java/se/jensen/project/common/dao/EntityNotFoundException.java
-/Users/jocke/development/jensen-project/jensen-project-common/src/main/java/se/jensen/project/common/util/StringUtil.java
-/Users/jocke/development/jensen-project/jensen-project-common/src/main/java/se/jensen/project/common/dao/EntityAlreadyInStorageException.java
-/Users/jocke/development/jensen-project/jensen-project-common/src/main/java/se/jensen/project/common/aspects/TimeAndLoggImpl.java
